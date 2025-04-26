@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100vh;
+}
+
+:root {
+    --primary-color: #595959;
+    --secondary-color: #333;
+    --bg-color: #f9f9f9;
+    --font-family: "Overpass", sans-serif;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+    line-height: 2;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 1rem;
+    text-align: center;
+    background: linear-gradient(55deg, var(--primary-color), #363333);
+    color: white;
+}
+
+header img {
+    height: 12vh;
+    width: auto;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+nav {
+    width: 50%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: #595959;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color var(--transition-speed);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    left: 0%;
+    bottom: -3px;
+    transition: width var(--transition-speed);
+}
+
+nav a :hover {
+    color: #f9f9f9;
+}
+
+main {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    padding: 2rem;
+    gap: 2rem;
+}
+
+aside{
+    background: white;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px var(--shadow);
+    border-radius: 5px;
+    background-color: #9f9d9d; 
+}
+
+section{
+    display: flex;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+section p {
+    text-align: center;
+    justify-content: center;
+}
+
+article {
+    background: white;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px var(--shadow);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    border-radius: 10px;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--shadow);
+}
+
+article h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
